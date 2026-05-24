@@ -1,0 +1,15 @@
+<div class="carousel-container">
+    <div class="image-container">
+        <div class="prev-img carousel-arrow" (click)="prev()">
+            <div><</div>
+        </div>
+        <img [src]="imageList()[currentIndex()].url" [alt]="imageList()[currentIndex()].alt">
+        <div class="next-img carousel-arrow" (click)="next()">
+            <div>></div>
+        </div>
+    </div>
+    <div class="image-data">
+        <div class="image-name">{{ imageList()[currentIndex()].alt }}</div>
+        <div class="image-pos">{{ currentIndex() + 1 }} / {{ imageList().length }}</div>
+    </div>
+</div>

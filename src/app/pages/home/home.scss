@@ -1,0 +1,91 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 0.2rem solid var(--portal-border);
+    padding: 2rem;
+    margin: 2rem;
+}
+
+section, footer {
+    margin: 2rem;
+}
+
+.header-user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 30rem;
+}
+
+.header-title {
+    font-size: 2rem;
+}
+
+.header-subtitle {
+    font-size: 1.25rem;
+    text-transform: uppercase;
+}
+
+.picture-circle {
+    border-radius: 50rem;
+    border: 0.1rem solid var(--portal-primary);
+    width: 5.5rem;
+    height: 5.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.picture-text {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.header-state {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 0.1rem solid var(--portal-border);
+    padding: 0.5rem;
+    margin: 0.5rem;
+    width: 10rem;
+}
+
+.state-led {
+    border-radius: 50rem;
+    border: 0.1rrem solid var(--portal-text);
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: var(--portal-text);
+    box-shadow: 0 0 6px var(--portal-text);
+}
+
+.skill-section {
+    margin-bottom:3rem;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    margin: 1.5rem 0;
+    font-size: 1.15rem;
+    gap: 1rem;
+}
+
+.section-header > hr {
+    width: 100%;
+    height: 1px;
+    border-color:var(--portal-text);
+}
+
+.section-header > h3 {
+    text-transform: uppercase;
+    white-space: nowrap
+}
+
+.section-body {
+    display: flex;
+    gap:1rem;
+    flex-direction: column;
+}

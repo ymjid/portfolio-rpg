@@ -1,0 +1,79 @@
+.quest-card {
+    border: 0.1rem solid var(--portal-border);
+    border-radius: 0.5rem;
+}
+
+.quest-header {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--portal-card);
+    cursor: pointer;
+}
+
+.quest-info {
+    display: flex;
+    flex-direction: column;
+    gap:0.5rem;
+}
+.quest-name {
+    font-weight: bold;
+    font-size:1rem;
+}
+.quest-tags {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.quest-tag {
+    border: 0.1rem solid var(--portal-border);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    color: var(--portal-primary)
+}
+
+.quest-state {
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    text-transform: capitalize;
+}
+
+.quest-completed {
+    border: 0.1rem solid var(--portal-border);
+    color: var(--portal-primary);
+}
+
+.quest-progress {
+    border: 0.1rem solid #2e1c0d;
+    color: #9E4D1D;
+}
+
+.quest-state-container {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.quest-test {
+    border: 0.1rem solid white;
+    border-radius: 0.5rem;
+    color:white;
+    background-color: black;
+    padding: 0.75rem;
+    display: block;
+}
+
+.quest-test:hover {
+    background-color: #464646;
+}
+
+.quest-sub {
+     padding: 2rem;
+     display: flex;
+     flex-direction: column;
+     gap:0.5rem;
+}
+
+.quest-sub-details {
+    color:var(--portal-primary);
+}

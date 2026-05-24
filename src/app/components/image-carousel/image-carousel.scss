@@ -1,0 +1,59 @@
+.carousel-container {
+    width: 100%;
+    max-width: 70rem;
+    border: 0.2rem solid var(--portal-border)
+}
+
+.image-container {
+    display: flex;
+    position: relative;
+}
+
+.carousel-arrow {
+    position: absolute;
+    height: 100%;
+    width: 5%;
+    color:transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.carousel-arrow > div {
+    font-size:3rem;
+}
+
+.prev-img {
+    left:0%;
+}
+
+.next-img {
+    right:0%;
+}
+
+.prev-img:hover {
+    background: linear-gradient(90deg,rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 80%);
+    color:white;
+}
+
+.next-img:hover {
+    background: linear-gradient(90deg,rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.8) 80%);
+    color:white;
+}
+
+.image-container > img {
+    width:100%;
+}
+
+.image-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.image-data > div {
+    font-size: 1rem;
+}

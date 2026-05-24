@@ -1,0 +1,36 @@
+@if (quest) {
+    <div class="quest-container">
+        <div class="quest-header">
+            <h1>{{ quest.name }}</h1>
+            <div class="quest-date">{{ quest.release }}</div>
+        </div>
+        <div class="quest-details">
+            <div class="quest-descrip">
+                <p>{{ quest.description }}</p>
+                <div class="quest-tags">
+                    @for (tag of quest.tags; track $index) {
+                        <p class="quest-tag">{{ tag }}</p>
+                    }
+                </div>
+                @if (quest.subquests.length > 0) {
+                    <div class="subquest-container">
+                    @for (subquest of quest.subquests; track $index) {
+                        <p class="subquest"> ✓ {{ subquest.name }}</p>
+                    }
+                    </div>
+                }
+            </div>
+        </div>
+        @if (quest.images) {
+            <div class="carousel">
+                <app-image-carousel [imageList]="quest.images"/>
+            </div>
+        }
+        @if (quest.preview) {
+            <div class="quest-preview">
+                <!--<iframe [src]="quest.preview"></iframe>-->
+                <a class="quest-test" [href]="quest.preview" target="_blank">▶ Test Project</a>
+            </div>
+        }
+    </div>
+}

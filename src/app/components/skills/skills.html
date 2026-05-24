@@ -1,0 +1,20 @@
+<div class="skill-card-container">
+    @for (skill of skills; track $index) {
+        <div class="skill-card">
+            <p class="skill-name">{{ skill.name }}</p>
+            <div class="skill-rate">
+                <div class="skill-rate-stars">
+                    @for (star of [1,2,3]; track star) {
+                        @if (star <= skill.rate.value) {
+                                <span>★</span>
+                        } @else {
+                                <span>☆</span>
+                        }
+                    }
+                </div>
+                <p class="skill-rate-name">{{ skill.rate.name }}</p>
+            </div>
+        </div>
+    }
+</div>
+

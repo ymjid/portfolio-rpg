@@ -1,0 +1,30 @@
+.skill-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.skill-card {
+   border: 0.1rem solid var(--portal-border);
+   border-radius: 0.5rem;
+   padding:0.5rem 1rem;
+   width: 10rem;
+   display: flex;
+   flex-direction: column;
+   height: 6rem;
+   justify-content: space-between;
+}
+
+.skill-name {
+    color:var(--portal-text);
+    font-size: 1rem;
+}
+
+.skill-rate-stars {
+    font-size: 1rem;
+    color:var(--portal-primary);
+}
+
+.skill-rate-name {
+    color:var(--portal-primary);
+}

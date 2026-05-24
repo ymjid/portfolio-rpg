@@ -1,0 +1,28 @@
+<div class="quest-card">
+    <div class="quest-header" (click)="toggle()">
+        <div class="quest-info">
+            <p class="quest-name">{{ quest().name }}</p>
+            <div class="quest-tags">
+                @for (tag of quest().tags; track $index) {
+                    <p class="quest-tag">{{ tag }}</p>
+                }
+            </div>
+        </div>
+        <div class="quest-state-container">
+            @if (quest().state === QuestState.COMPLETED) {
+                <div class="quest-test" [routerLink]="['/quest', quest().id]">▶ Test Project</div>
+            }
+            <p class="quest-state" [ngClass]="{'quest-completed': quest().state === QuestState.COMPLETED, 'quest-progress': quest().state === QuestState.PROGRESS, 'quest-failed': quest().state === QuestState.FAILED
+}">{{ quest().state }}</p>
+        </div>
+    </div>
+    @if (isOpen()) {
+        <div class="quest-sub">
+            @for (sub of quest().subquests; track $index) {
+                <div class="quest-sub-details">
+                    <p>✓ {{ sub.name }}</p>
+                </div>
+            }
+        </div>
+    }
+</div>

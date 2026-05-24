@@ -1,0 +1,61 @@
+<header>
+    <div class="header-user">
+        <div class="header-picture">
+            <!--<img src="" alt="" />-->
+            <div class="picture-circle">
+                <p class="picture-text">Y</p>
+            </div>
+        </div>
+        <div class="header-infos">
+            <p class="header-title">Ton pseudo</p>
+            <p class="header-subtitle">Integrator → Front-end developer</p>
+        </div>
+    </div>
+    <div class="header-state">
+        <div class="state-led"></div>
+        <div class="state-text">Looking for job</div>
+    </div>
+</header>
+<section class="skill-section">
+    <div class="section-header">
+        <h3>Skills</h3>
+        <hr>
+    </div>
+    <app-skills/>
+</section>
+<section class="quest-section">
+    @if (questCompletedList.length > 0) {
+        <div class="section-header">
+            <h3>Completed Quests</h3>
+            <hr>
+        </div>
+        <div class="section-body">
+        @for (quest of questCompletedList; track quest.id) {
+            <app-quest-card [quest]="quest"/>
+        }
+        </div>
+    }
+    @if (questProgressList.length > 0) {
+        <div class="section-header">
+            <h3>Active Quests</h3>
+            <hr>
+        </div>
+        <div class="section-body">
+        @for (quest of questProgressList; track quest.id) {
+            <app-quest-card [quest]="quest"/>
+        }
+        </div>
+    }
+    @if (questFailedList.length > 0) {
+        <div class="section-header">
+            <h3>Failed Quests</h3>
+            <hr>
+        </div>
+        <div class="section-body">
+        @for (quest of questFailedList; track quest.id) {
+            <app-quest-card [quest]="quest"/>
+        }
+        </div>
+    }
+</section>
+<footer></footer>
