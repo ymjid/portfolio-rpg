@@ -6,17 +6,51 @@ export interface GithubReadme {
   name: string; 
 }
 
-export enum QuestState {
-    PROGRESS = "progress",
-    COMPLETED = "completed",
-    FAILED = "failed",
-    LOCKED = "locked"
+export enum CharState {
+    LOOKINGJOB = "Looking for job",
+    WORKING = "Working",
+}
+
+export interface Character {
+    name: string;
+    class: string;
+    img?: string;
+    state: CharState;
+}
+
+export const CHARACTER: Character = {
+    name: "Yan",
+    class: "Integrator → Front-end developer",
+    state: CharState.LOOKINGJOB,
+}
+
+export type QuestStateType = {
+    text: string;
+    icon:  string;
+}
+export const QuestState = {
+    PROGRESS: {
+        text: "progress",
+        icon:  "◈",
+    },
+    COMPLETED: {
+        text: "completed",
+        icon: "✓",
+    },
+    FAILED: {
+        text: "failed",
+        icon: "✗",
+    },
+    LOCKED: {
+        text: "locked",
+        icon: "⊘",
+    },
 }
 
 export enum TagsType {
     HTML = "HTML",
     CSS = "CSS",
-    JAVASCRIPT = "Javascript",
+    JAVASCRIPT = "JavaScript",
     TYPESCRIPT = "TypeScript",
     ANGULAR = "Angular",
     SCSS = "SCSS",
@@ -35,7 +69,7 @@ export type QuestImage = {
 
 export interface SubQuest {
     name: string,
-    state: QuestState
+    state: QuestStateType
 }
 
 export interface Quest {
@@ -45,7 +79,7 @@ export interface Quest {
     release: string
     tags: TagsType[],
     subquests: SubQuest[],
-    state: QuestState,
+    state: QuestStateType,
     preview?: string,
     theme?: ThemeType,
     images?: QuestImage[],
@@ -83,7 +117,7 @@ export const QUESTS: Quest[] = [
                 }
         ],
         state: QuestState.COMPLETED,
-        preview: "preview",
+        preview: "https://ymjid.github.io/Snake/snake.html",
         theme: ThemeType.SNAKE,
         images: [
             {

@@ -1,6 +1,6 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { QuestService } from '../../services/questService';
-import { Quest, QuestState } from '../../data/quests.data';
+import { CHARACTER, Character, Quest, QuestState } from '../../data/quests.data';
 import { QuestCard } from '../../components/quest-card/quest-card';
 import { Skills } from '../../components/skills/skills';
 
@@ -16,6 +16,7 @@ export class Home implements OnInit {
   questCompletedList: Quest[] = []
   questProgressList: Quest[] = []
   questFailedList: Quest[] = []
+  Hero: Character = CHARACTER
 
   ngOnInit() {
     this.questList = this.questService.getQuests()

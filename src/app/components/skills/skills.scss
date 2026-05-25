@@ -28,3 +28,14 @@
 .skill-rate-name {
     color:var(--portal-primary);
 }
+
+@media (max-width: 768px) {
+    .skill-card-container {
+        gap: 0.5rem;
+        justify-content: center;
+    }
+
+    .skill-card {
+        height: auto;
+    }
+}

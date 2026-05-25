@@ -23,6 +23,7 @@
 .quest-tags {
     display: flex;
     gap: 0.5rem;
+    flex-wrap: wrap;
 }
 
 .quest-tag {
@@ -48,10 +49,22 @@
     color: #9E4D1D;
 }
 
+.quest-failed {
+    border: 0.1rem solid #2e0d0d;
+    color: #9e1d1d;
+}
+
+.quest-locked {
+    border: 0.1rem solid #333333;
+    color: #a3a3a3;
+}
+
 .quest-state-container {
     display: flex;
     gap: 1rem;
     align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
 .quest-test {
@@ -76,4 +89,26 @@
 
 .quest-sub-details {
     color:var(--portal-primary);
+}
+
+.completed {
+    color: var(--portal-primary);
+}
+
+.progress {
+    color: #9E4D1D;
+}
+
+.failed {
+    color: #9e1d1d;
+}
+
+.locked {
+    color: #616161;
+}
+
+@media (max-width: 768px) {
+    .quest-header {
+        gap: 1rem;
+    }
 }

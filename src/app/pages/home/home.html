@@ -1,19 +1,24 @@
 <header>
     <div class="header-user">
         <div class="header-picture">
-            <!--<img src="" alt="" />-->
-            <div class="picture-circle">
-                <p class="picture-text">Y</p>
-            </div>
+            @if (Hero.img) {
+                <div class="picture-circle">
+                    <img class="picture-image" [src]="Hero.img" alt="" />
+                </div>
+            } @else {
+                <div class="picture-circle">
+                    <p class="picture-text">{{ Hero.name[0] }}</p>
+                </div>
+            }
         </div>
         <div class="header-infos">
-            <p class="header-title">Ton pseudo</p>
-            <p class="header-subtitle">Integrator → Front-end developer</p>
+            <p class="header-title">{{ Hero.name }}</p>
+            <p class="header-subtitle">{{ Hero.class }}</p>
         </div>
     </div>
     <div class="header-state">
         <div class="state-led"></div>
-        <div class="state-text">Looking for job</div>
+        <div class="state-text">{{ Hero.state }}</div>
     </div>
 </header>
 <section class="skill-section">
