@@ -15,6 +15,7 @@ export interface Character {
     name: string;
     class: string;
     img?: string;
+    github?: string;
     state: CharState;
 }
 
@@ -22,6 +23,7 @@ export const CHARACTER: Character = {
     name: "Yan",
     class: "Integrator → Front-end developer",
     state: CharState.LOOKINGJOB,
+    github: `https://github.com/${GithubUsername}`
 }
 
 export type QuestStateType = {
@@ -83,6 +85,7 @@ export interface Quest {
     preview?: string,
     theme?: ThemeType,
     images?: QuestImage[],
+    code?: string,
 }
 
 export const QUESTS: Quest[] = [
@@ -141,6 +144,7 @@ export const QUESTS: Quest[] = [
                 alt:"Level Selection",
             }
         ],
+        code: "https://github.com/ymjid/Snake",
     },
     {
         id: "2",
@@ -173,6 +177,7 @@ export const QUESTS: Quest[] = [
         state: QuestState.COMPLETED,
         preview: "",
         theme: ThemeType.VIDEO,
+        code: "https://github.com/ymjid/VideoListMaker",
     },
     {
         id: "3",
