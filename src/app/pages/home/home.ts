@@ -3,10 +3,13 @@ import { QuestService } from '../../services/questService';
 import { CHARACTER, Character, Quest, QuestState } from '../../data/quests.data';
 import { QuestCard } from '../../components/quest-card/quest-card';
 import { Skills } from '../../components/skills/skills';
+import { NgIcon, provideIcons } from '@ng-icons/core';
+import { tablerBrandLinkedin, tablerBrandGithub } from '@ng-icons/tabler-icons';
 
 @Component({
   selector: 'app-home',
-  imports: [QuestCard, Skills],
+  imports: [QuestCard, Skills, NgIcon],
+    providers: [provideIcons({ tablerBrandLinkedin,  tablerBrandGithub})],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })

@@ -1,9 +1,12 @@
 import { Component, input, signal } from '@angular/core';
 import { QuestImage } from '../../data/quests.data';
+import { NgIcon, provideIcons } from '@ng-icons/core';
+import { tablerArrowBadgeLeft, tablerArrowBadgeRight } from '@ng-icons/tabler-icons';
 
 @Component({
   selector: 'app-image-carousel',
-  imports: [],
+  imports: [NgIcon],
+  providers: [provideIcons({ tablerArrowBadgeLeft, tablerArrowBadgeRight})],
   templateUrl: './image-carousel.html',
   styleUrl: './image-carousel.scss',
 })

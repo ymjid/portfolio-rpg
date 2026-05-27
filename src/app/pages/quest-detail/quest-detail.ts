@@ -7,10 +7,13 @@ import { ImageCarousel } from '../../components/image-carousel/image-carousel';
 import { RouterLink } from '@angular/router';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { NgClass } from '@angular/common';
+import { tablerCheck, tablerSkull, tablerLock, tablerProgress, tablerPlayerPlay, tablerX, tablerBrandGithub } from '@ng-icons/tabler-icons';
+import { NgIcon, provideIcons } from '@ng-icons/core';
 
 @Component({
   selector: 'app-quest-detail',
-  imports: [ImageCarousel, RouterLink, NgClass],
+  imports: [ImageCarousel, RouterLink, NgClass, NgIcon],
+  providers: [provideIcons({ tablerCheck, tablerSkull, tablerLock, tablerProgress, tablerPlayerPlay, tablerX, tablerBrandGithub})],
   templateUrl: './quest-detail.html',
   styleUrl: './quest-detail.scss',
 })

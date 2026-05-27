@@ -6,8 +6,8 @@
         <div class="quest-header">
             <h1>{{ quest.name }}</h1>
             <div class="quest-date">{{ quest.release }}</div>
-            <div>
-                <a [href]="quest.code" ><img src="" alt="Github repo"/></a>
+            <div class="quest-code">
+                <a [href]="quest.code" ><ng-icon name="tablerBrandGithub" /></a>
             </div>
         </div>
         <div class="quest-details">
@@ -24,16 +24,16 @@
                         <p class="subquest" [ngClass]="{'quest-completed': subquest.state.text === QuestState.COMPLETED.text, 'quest-progress': subquest.state.text === QuestState.PROGRESS.text, 'quest-failed': subquest.state.text === QuestState.FAILED.text, 'quest-locked': subquest.state.text === QuestState.LOCKED.text
 }">
                         @if (subquest.state.text === QuestState.COMPLETED.text) {
-                            <span>{{ QuestState.COMPLETED.icon }}</span> 
+                            <ng-icon [name]="QuestState.COMPLETED.icon" /> 
                         }
                         @if (subquest.state.text === QuestState.PROGRESS.text) {
-                            <span>{{ QuestState.PROGRESS.icon }}</span> 
+                            <ng-icon [name]="QuestState.PROGRESS.icon" /> 
                         }
                         @if (subquest.state.text === QuestState.FAILED.text) {
-                            <span>{{ QuestState.FAILED.icon }}</span> 
+                            <ng-icon [name]="QuestState.FAILED.icon" /> 
                         }
                         @if (subquest.state.text === QuestState.LOCKED.text) {
-                            <span>{{ QuestState.LOCKED.icon }}</span> 
+                            <ng-icon [name]="QuestState.LOCKED.icon" /> 
                         }
                         {{ subquest.name }}</p>
                     }
@@ -48,11 +48,16 @@
         }
         @if (safePreviewUrl) {
             <div class="quest-preview">
-                <div class="quest-test" (click)="openPreview()">▶ Test Project</div>
+                <div class="quest-test" (click)="openPreview()">
+                    <div class="quest-test-text" >
+                        <ng-icon name="tablerPlayerPlay" />  
+                        <div>Test Project</div>
+                    </div>
+                </div>
                 @if (isPreviewOpen()) {
                     <div class="preview">
                         <div class="close-preview-button" (click)="closePreview()">
-                            <span>X</span>
+                            <ng-icon name="tablerX" />
                         </div>
                         <iframe #previewIframe [src]="safePreviewUrl"></iframe>
                     </div>

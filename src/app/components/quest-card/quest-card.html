@@ -23,16 +23,16 @@
                     <p [ngClass]="{'completed': sub.state.text === QuestState.COMPLETED.text, 'progress': sub.state.text === QuestState.PROGRESS.text, 'failed': sub.state.text === QuestState.FAILED.text, 'locked': sub.state.text === QuestState.LOCKED.text
 }">
                         @if (sub.state.text === QuestState.COMPLETED.text) {
-                            <span>{{ QuestState.COMPLETED.icon }}</span> 
+                            <ng-icon [name]="QuestState.COMPLETED.icon" /> 
                         }
                         @if (sub.state.text === QuestState.PROGRESS.text) {
-                            <span>{{ QuestState.PROGRESS.icon }}</span> 
+                            <ng-icon [name]="QuestState.PROGRESS.icon" /> 
                         }
                         @if (sub.state.text === QuestState.FAILED.text) {
-                            <span>{{ QuestState.FAILED.icon }}</span> 
+                            <ng-icon [name]="QuestState.FAILED.icon" /> 
                         }
                         @if (sub.state.text === QuestState.LOCKED.text) {
-                            <span>{{ QuestState.LOCKED.icon }}</span> 
+                            <ng-icon [name]="QuestState.LOCKED.icon" /> 
                         }
                         {{ sub.name }}</p>
                 </div>

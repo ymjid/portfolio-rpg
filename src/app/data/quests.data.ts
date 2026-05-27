@@ -16,6 +16,7 @@ export interface Character {
     class: string;
     img?: string;
     github?: string;
+    linkedin?: string;
     state: CharState;
 }
 
@@ -23,7 +24,8 @@ export const CHARACTER: Character = {
     name: "Yan",
     class: "Integrator → Front-end developer",
     state: CharState.LOOKINGJOB,
-    github: `https://github.com/${GithubUsername}`
+    github: `https://github.com/${GithubUsername}`,
+    linkedin: `https://fr.linkedin.com/in/yannis-m-jid-416b5860`
 }
 
 export type QuestStateType = {
@@ -33,19 +35,19 @@ export type QuestStateType = {
 export const QuestState = {
     PROGRESS: {
         text: "progress",
-        icon:  "◈",
+        icon:  "tablerProgress",
     },
     COMPLETED: {
         text: "completed",
-        icon: "✓",
+        icon: "tablerCheck",
     },
     FAILED: {
         text: "failed",
-        icon: "✗",
+        icon: "tablerSkull",
     },
     LOCKED: {
         text: "locked",
-        icon: "⊘",
+        icon: "tablerLock",
     },
 }
 

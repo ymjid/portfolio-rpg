@@ -1,11 +1,11 @@
 <div class="carousel-container">
     <div class="image-container">
         <div class="prev-img carousel-arrow" (click)="prev()">
-            <div><</div>
+            <ng-icon name="tablerArrowBadgeLeft" />
         </div>
         <img [src]="imageList()[currentIndex()].url" [alt]="imageList()[currentIndex()].alt">
         <div class="next-img carousel-arrow" (click)="next()">
-            <div>></div>
+            <ng-icon name="tablerArrowBadgeRight" />
         </div>
     </div>
     <div class="image-data">

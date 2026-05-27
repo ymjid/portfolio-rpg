@@ -98,6 +98,10 @@ section, footer {
     flex-direction: column;
 }
 
+a:link, a:visited {
+  color: var(--portal-text);
+}
+
 @media (max-width: 768px) {
     header {
         gap: 1rem;

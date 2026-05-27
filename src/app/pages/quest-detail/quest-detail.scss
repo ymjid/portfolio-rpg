@@ -16,6 +16,14 @@
     font-size: 1rem;
 }
 
+.quest-code {
+    font-size: 2rem;
+}
+
+.quest-code a:link, .quest-code a:visited {
+  color: var(--portal-text);
+}
+
 .quest-descrip > p {
     font-size: 1.25rem;
     max-width: 60rem;
@@ -62,6 +70,11 @@
     text-align: center;
     display: inline-block;
     width: auto;
+}
+
+.quest-test-text {
+    display:flex; 
+    gap: 0.5rem;
 }
 
 .quest-test:hover {
@@ -121,7 +134,7 @@
     border-radius: 0.5rem;
 }
 
-.close-preview-button > span {
+.close-preview-button > ng-icon {
     font-size: 2rem;
     font-weight: bold;
 }
