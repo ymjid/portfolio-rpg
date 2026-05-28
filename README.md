@@ -4,17 +4,17 @@
 A developer portfolio built with Angular, designed as a hub. 
 Each project is presented as a quest with its own theme, 
 features, and interactive preview.
+Built as my first Angular project, mentored by Claude (Anthropic) throughout the development process.
 
 ## 🖼️ Preview
 ![Portfolio RPG](https://raw.githubusercontent.com/ymjid/portfolio-rpg/main/src/assets/preview.png)
 
 ## ✨ Features
-- Hub terminal/cyber avec thèmes par portail
-- Compétences avec notation par étoiles
-- Quêtes avec sous-objectifs
-- Carousel d'images par projet (Si disponible)
-- Preview interactive des projets (Si disponible)
-- Lien GitHub sur chaque quête
+- Terminal/cyber hub with theme by portal
+- Skills rated with stars
+- Quests with sub-objectives
+- Carousel d'images per project (If avaialble)
+- Interactive preview of projects (If avaialble)
 - Responsive design
 
 ## 🛠️ Technologies
