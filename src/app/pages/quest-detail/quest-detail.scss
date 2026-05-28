@@ -91,18 +91,17 @@
     position: fixed;
     top: 1rem;
     left: 2rem;
-    border: 0.1rem solid var(--portal-border);
+    border: 0.1rem solid white;
     border-radius: 0.5rem;
     padding: 0.5rem 1rem;
-    color: var(--portal-text);
     cursor: pointer;
     text-decoration: none;
-    background: var(--portal-card);
+    background: rgba(3, 13, 7, 0.85);
+    color: white;
 }
 
 .back-button:hover {
-    border-color: var(--portal-primary);
-    color: var(--portal-primary);
+    background-color: #464646;
 }
 
 .preview {
