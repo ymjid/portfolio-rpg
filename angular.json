@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "portfofio-rpg": {
+    "portfolio-rpg": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -61,10 +61,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "portfofio-rpg:build:production"
+              "buildTarget": "portfolio-rpg:build:production"
             },
             "development": {
-              "buildTarget": "portfofio-rpg:build:development"
+              "buildTarget": "portfolio-rpg:build:development"
             }
           },
           "defaultConfiguration": "development"
