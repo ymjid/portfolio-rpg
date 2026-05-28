@@ -13,7 +13,7 @@ Built as my first Angular project, mentored by Claude (Anthropic) throughout the
 - Terminal/cyber hub with theme by portal
 - Skills rated with stars
 - Quests with sub-objectives
-- Carousel d'images per project (If avaialble)
+- Carousel of images per project (If avaialble)
 - Interactive preview of projects (If avaialble)
 - Responsive design
 
