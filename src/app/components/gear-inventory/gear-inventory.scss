@@ -1,10 +1,76 @@
-.inventory{
-    border: solid 1px var(--portal-primary);
-    display:flex;
-    flex-wrap: wrap;
-    box-sizing: content-box;
+.inventory-container {
+    display: flex;
+    justify-content: center;
 }
 
+.inventory {
+    display: grid;
+    grid-template-columns: repeat(12, 2rem);
+    grid-template-rows: repeat(6, 2rem);
+    position: relative;
+}
 .slot {
-    border: solid 1px var(--portal-primary);
+    background-color: var(--portal-card);
+    border: 0.1rem solid var(--portal-border);
+}
+.gear-item {
+    position: absolute;
+    background-color: var(--portal-card);
+    border: 0.1rem solid var(--portal-primary);
+    padding: 0.2rem;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
+.gear-tooltip {
+    display: none;
+    position: absolute;
+    bottom: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--portal-card);
+    border: 0.1rem solid var(--portal-border);
+    padding: 0.75rem;
+    width: 12rem;
+    z-index: 100;
+}
+
+.gear-item:hover .gear-tooltip {
+    display: block;
+}
+
+.common {
+    background-color: rgb(255,255,255);
+}
+
+.common-text {
+    color: rgb(255,255,255);
+}
+
+.rare {
+    background-color: rgb(44, 40, 255);
+}
+
+.rare-text {
+    color: rgb(44, 40, 255);
+}
+
+
+.epic {
+    background-color: rgb(187, 40, 255);
+}
+
+.epic-text {
+    color: rgb(187, 40, 255);
+}
+
+.legendary {
+    background-color: rgb(255, 144, 40);
+}
+
+.legendary-text {
+    color: rgb(255, 144, 40);
 }

@@ -265,7 +265,14 @@ export const SKILLS: Skill[] = [
     }
 ]
 
-export enum rarety  {
+export const GearIcons = {
+    VSCode: "assets/gear-icons/vscode_icon.svg",
+    GitHub: "assets/gear-icons/github_icon.svg",
+    GWD: "assets/gear-icons/gwd_icon.svg",
+    Chrome: "assets/gear-icons/chrome_icon.svg",
+}
+
+export enum Rarety  {
     COMMON = "common",
     RARE = "rare",
     EPIC = "epic",
@@ -275,33 +282,48 @@ export enum rarety  {
 export interface Gear {
     name: string,
     logo: string,
-    rarety: rarety,
+    rarety: Rarety,
     description : string,
+    slot: number,
+    width: number,
+    height: number,
 }
 
 export const USERGEAR: Gear[] = [
     {
         name: "VS Code",
-        logo: "",
-        rarety: rarety.LEGENDARY,
+        logo: GearIcons.VSCode,
+        rarety: Rarety.LEGENDARY,
         description: "",
+        slot: 1,
+        width: 2,
+        height: 2,
     },
     {
         name: "GitHub",
-        logo: "",
-        rarety: rarety.EPIC,
+        logo: GearIcons.GitHub,
+        rarety: Rarety.EPIC,
         description: "",
+        slot: 4,
+        width: 3,
+        height: 1,
     },
     {
         name: "Chrome",
-        logo: "",
-        rarety: rarety.RARE,
+        logo: GearIcons.Chrome,
+        rarety: Rarety.RARE,
         description: "",
+        slot: 7,
+        width: 2,
+        height: 3,
     },
     {
         name: "Google Web Designer",
-        logo: "",
-        rarety: rarety.COMMON,
+        logo: GearIcons.GWD,
+        rarety: Rarety.COMMON,
         description: "",
+        slot: 10,
+        width: 1,
+        height: 1,
     }
 ]

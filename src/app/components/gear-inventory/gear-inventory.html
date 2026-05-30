@@ -1,5 +1,17 @@
-<div class="inventory">
-        @for (slot of inventorySlots; track $index) {
-                <div class="slot"></div>
-        }
+<div class="inventory-container">
+        <div class="inventory" [style]="InventoryCSS">
+                @for (slot of inventorySlots; track $index) {
+                        <div class="slot"></div>
+                }
+                @for (gear of UserGear; track $index) {
+                        <div class="gear-item" [class]="gear.rarety" [style]="getGearStyle(gear)">
+                                <img [src]="gear.logo" [alt]="gear.name"/>
+                                <div class="gear-tooltip">
+                                        <p class="tooltip-name" [ngClass]="{'common-text': gear.rarety === Rarety.COMMON, 'rare-text': gear.rarety === Rarety.RARE, 'epic-text': gear.rarety === Rarety.EPIC, 'legendary-text': gear.rarety === Rarety.LEGENDARY}"> {{ gear.name }}</p>
+                                        <p class="tooltip-rarety">{{ gear.rarety }}</p>
+                                        <p class="tooltip-desc">{{ gear.description }}</p>
+                                </div>
+                        </div>
+                }
+        </div>
 </div>
