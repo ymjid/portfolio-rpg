@@ -5,10 +5,11 @@ import { QuestCard } from '../../components/quest-card/quest-card';
 import { Skills } from '../../components/skills/skills';
 import { NgIcon, provideIcons } from '@ng-icons/core';
 import { tablerBrandLinkedin, tablerBrandGithub } from '@ng-icons/tabler-icons';
+import { GearInventory } from '../../components/gear-inventory/gear-inventory';
 
 @Component({
   selector: 'app-home',
-  imports: [QuestCard, Skills, NgIcon],
+  imports: [QuestCard, Skills, NgIcon, GearInventory],
     providers: [provideIcons({ tablerBrandLinkedin,  tablerBrandGithub})],
   templateUrl: './home.html',
   styleUrl: './home.scss',

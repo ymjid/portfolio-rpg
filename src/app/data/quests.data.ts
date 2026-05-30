@@ -264,3 +264,44 @@ export const SKILLS: Skill[] = [
         rate: SkillRate.BASIC,
     }
 ]
+
+export enum rarety  {
+    COMMON = "common",
+    RARE = "rare",
+    EPIC = "epic",
+    LEGENDARY = "legendary"
+}
+
+export interface Gear {
+    name: string,
+    logo: string,
+    rarety: rarety,
+    description : string,
+}
+
+export const USERGEAR: Gear[] = [
+    {
+        name: "VS Code",
+        logo: "",
+        rarety: rarety.LEGENDARY,
+        description: "",
+    },
+    {
+        name: "GitHub",
+        logo: "",
+        rarety: rarety.EPIC,
+        description: "",
+    },
+    {
+        name: "Chrome",
+        logo: "",
+        rarety: rarety.RARE,
+        description: "",
+    },
+    {
+        name: "Google Web Designer",
+        logo: "",
+        rarety: rarety.COMMON,
+        description: "",
+    }
+]

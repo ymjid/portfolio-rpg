@@ -1,0 +1,10 @@
+.inventory{
+    border: solid 1px var(--portal-primary);
+    display:flex;
+    flex-wrap: wrap;
+    box-sizing: content-box;
+}
+
+.slot {
+    border: solid 1px var(--portal-primary);
+}
