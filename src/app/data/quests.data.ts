@@ -202,15 +202,42 @@ export const QUESTS: Quest[] = [
                 },
                 {
                     name: "Development",
-                    state: QuestState.PROGRESS
+                    state: QuestState.COMPLETED
                 },
                 {
                     name: "Deployment",
-                    state: QuestState.LOCKED
+                    state: QuestState.COMPLETED
                 }
         ],
-        state: QuestState.PROGRESS,
+        state: QuestState.COMPLETED,
         preview: "",
+        images: [
+            {
+                url:"https://raw.githubusercontent.com/ymjid/portfolio-rpg/main/src/assets/portfolio-screenshots/screenshot1.png",
+                alt:"Home",
+            },
+            {
+                url:"https://raw.githubusercontent.com/ymjid/portfolio-rpg/main/src/assets/portfolio-screenshots/screenshot2.png",
+                alt:"Quest Card",
+            },
+            {
+                url:"https://raw.githubusercontent.com/ymjid/portfolio-rpg/main/src/assets/portfolio-screenshots/screenshot3.png",
+                alt:"Quest Detail",
+            },
+            {
+                url:"https://raw.githubusercontent.com/ymjid/portfolio-rpg/main/src/assets/portfolio-screenshots/screenshot4.png",
+                alt:"Quest Detail carousel",
+            },
+            {
+                url:"https://raw.githubusercontent.com/ymjid/portfolio-rpg/main/src/assets/portfolio-screenshots/screenshot5.png",
+                alt:"Quest Detail preview",
+            },
+            {
+                url:"https://raw.githubusercontent.com/ymjid/portfolio-rpg/main/src/assets/portfolio-screenshots/screenshot6.png",
+                alt:"Quest Detail Theme 2",
+            },
+        ],
+        code: "https://github.com/ymjid/portfolio-rpg"
     }
 ]
 
