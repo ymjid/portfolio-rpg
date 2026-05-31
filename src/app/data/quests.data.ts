@@ -213,7 +213,7 @@ export const QUESTS: Quest[] = [
         preview: "",
         images: [
             {
-                url:"https://raw.githubusercontent.com/ymjid/portfolio-rpg/main/src/assets/portfolio-screenshots/screenshot1.png",
+                url:"https://raw.githubusercontent.com/ymjid/portfolio-rpg/main/src/assets/portfolio-screenshots/screenshot.png",
                 alt:"Home",
             },
             {
