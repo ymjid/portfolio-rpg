@@ -38,12 +38,17 @@
     z-index: 100;
 }
 
+.tooltip-rarety {
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+}
+
 .gear-item:hover .gear-tooltip {
     display: block;
 }
 
 .common {
-    background-color: rgb(255,255,255);
+    background-color: rgba(255,255,255, 0.6);
 }
 
 .common-text {
@@ -51,7 +56,7 @@
 }
 
 .rare {
-    background-color: rgb(44, 40, 255);
+    background-color: rgba(44, 40, 255, 0.6);
 }
 
 .rare-text {
@@ -60,15 +65,15 @@
 
 
 .epic {
-    background-color: rgb(187, 40, 255);
+    background-color: rgba(187, 40, 255, 0.6);
 }
 
 .epic-text {
-    color: rgb(187, 40, 255);
+    color: rgba(187, 40, 255);
 }
 
 .legendary {
-    background-color: rgb(255, 144, 40);
+    background-color: rgba(255, 144, 40, 0.6);
 }
 
 .legendary-text {
