@@ -9,7 +9,7 @@
             </div>
         </div>
         <div class="quest-state-container">
-            @if (quest().state === QuestState.COMPLETED) {
+            @if (quest().state.text === QuestState.COMPLETED.text) {
                 <div class="quest-test" [routerLink]="['/quest', quest().id]">Details</div>
             }
             <p class="quest-state" [ngClass]="{'quest-completed': quest().state.text === QuestState.COMPLETED.text, 'quest-progress': quest().state.text === QuestState.PROGRESS.text, 'quest-failed': quest().state.text === QuestState.FAILED.text

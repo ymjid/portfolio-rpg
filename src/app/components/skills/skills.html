@@ -1,5 +1,6 @@
+@if (questService.isLoaded()) {
 <div class="skill-card-container">
-    @for (skill of skills; track $index) {
+    @for (skill of questService.skills(); track $index) {
         <div class="skill-card">
             <p class="skill-name">{{ skill.name }}</p>
             <div class="skill-rate">
@@ -17,4 +18,5 @@
         </div>
     }
 </div>
+}
 

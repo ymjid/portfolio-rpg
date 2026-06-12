@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { Gear, Rarety, USERGEAR } from '../../data/quests.data';
+import { Component, inject } from '@angular/core';
+import { Gear, Rarety } from '../../data/quests.data';
 import { NgClass } from '@angular/common';
+import { QuestService } from '../../services/questService';
 
 
 @Component({
@@ -10,7 +11,8 @@ import { NgClass } from '@angular/common';
   styleUrl: './gear-inventory.scss',
 })
 export class GearInventory {
-  protected readonly UserGear = USERGEAR;
+  questService = inject(QuestService)
+
   protected readonly Rarety = Rarety;
   InventorySize = {
     width : 24,
@@ -26,8 +28,8 @@ export class GearInventory {
   SlotCSS: string = `width:${this.SlotSize.width}rem; height:${this.SlotSize.height}rem;`
 
   getGearAtSlot(index: number): Gear | undefined {
-    return this.UserGear.find(gear => gear.slot === index);
-}
+    return this.questService.gears().find(gear => gear.slot === index);
+  }
 
 getGearStyle(gear: Gear): string {
 const col = gear.slot % 12;
@@ -42,4 +44,5 @@ const col = gear.slot % 12;
     
     return `left: ${left}rem; top: ${top}rem; width: ${width}rem; height: ${height}rem;`;
 }
+
 }

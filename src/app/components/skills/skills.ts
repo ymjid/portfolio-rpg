@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { SKILLS } from '../../data/quests.data';
+import { Component, inject } from '@angular/core';
+import { QuestService } from '../../services/questService';
 
 @Component({
   selector: 'app-skills',
@@ -7,6 +7,7 @@ import { SKILLS } from '../../data/quests.data';
   templateUrl: './skills.html',
   styleUrl: './skills.scss',
 })
+
 export class Skills {
-  skills = SKILLS
+  questService = inject(QuestService)
 }

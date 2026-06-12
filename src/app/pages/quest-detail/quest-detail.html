@@ -41,7 +41,7 @@
                 }
             </div>
         </div>
-        @if (quest.images) {
+        @if (quest.images && quest.images.length > 0) {
             <div class="carousel">
                 <app-image-carousel [imageList]="quest.images"/>
             </div>

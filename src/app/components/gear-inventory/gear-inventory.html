@@ -1,9 +1,10 @@
+@if (questService.isLoaded()) {
 <div class="inventory-container">
         <div class="inventory" [style]="InventoryCSS">
                 @for (slot of inventorySlots; track $index) {
                         <div class="slot"></div>
                 }
-                @for (gear of UserGear; track $index) {
+                @for (gear of questService.gears(); track $index) {
                         <div class="gear-item" [class]="gear.rarety" [style]="getGearStyle(gear)">
                                 <img [src]="gear.logo" [alt]="gear.name"/>
                                 <div class="gear-tooltip">
@@ -15,3 +16,4 @@
                 }
         </div>
 </div>
+}

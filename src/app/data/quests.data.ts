@@ -1,11 +1,3 @@
-export const GithubUsername = "ymjid";
-
-export interface GithubReadme {
-  content: string;
-  encoding: string;
-  name: string; 
-}
-
 export enum CharState {
     LOOKINGJOB = "Looking for job",
     WORKING = "Working",
@@ -18,14 +10,6 @@ export interface Character {
     github?: string;
     linkedin?: string;
     state: CharState;
-}
-
-export const CHARACTER: Character = {
-    name: "Yan",
-    class: "Integrator → Front-end developer",
-    state: CharState.LOOKINGJOB,
-    github: `https://github.com/${GithubUsername}`,
-    linkedin: `https://fr.linkedin.com/in/yannis-m-jid-416b5860`
 }
 
 export type QuestStateType = {
@@ -51,21 +35,6 @@ export const QuestState = {
     },
 }
 
-export enum TagsType {
-    HTML = "HTML",
-    CSS = "CSS",
-    JAVASCRIPT = "JavaScript",
-    TYPESCRIPT = "TypeScript",
-    ANGULAR = "Angular",
-    SCSS = "SCSS",
-    PHP = "PHP",
-}
-
-export enum ThemeType {
-    SNAKE = "theme-snake",
-    VIDEO = "theme-video",
-}
-
 export type QuestImage = {
     url: string,
     alt: string,
@@ -81,174 +50,15 @@ export interface Quest {
     name: string,
     description: string, 
     release: string
-    tags: TagsType[],
+    tags: string[],
     subquests: SubQuest[],
     state: QuestStateType,
     preview?: string,
-    theme?: ThemeType,
+    theme?: string,
     images?: QuestImage[],
     code?: string,
 }
 
-export const QUESTS: Quest[] = [
-    {
-        id: "1",
-        name: "Snake",
-        description: `The aim of the project is to create a snake game. 
-        This is an improvement of the snake game created for a C project done during my studies. The project uses HTML, CSS, Javascript.
-        It's a personal project done during the year 2024.`,
-        release: "2024",
-        tags: [
-            TagsType.JAVASCRIPT,
-            TagsType.CSS,
-            TagsType.HTML,
-        ],
-        subquests: [
-                {
-                    name: "Customizable controls",
-                    state: QuestState.COMPLETED
-                },
-                                {
-                    name: "Create your custom snake levels with the Snake Editor",
-                    state: QuestState.COMPLETED
-                },
-                                {
-                    name: "Import & export custom snake levels created from the editor",
-                    state: QuestState.COMPLETED
-                },
-                                {
-                    name: "Offline leaderboards",
-                    state: QuestState.COMPLETED
-                }
-        ],
-        state: QuestState.COMPLETED,
-        preview: "https://ymjid.github.io/Snake/snake.html",
-        theme: ThemeType.SNAKE,
-        images: [
-            {
-                url:"https://raw.githubusercontent.com/ymjid/Snake/main/assets/img/media/Screenshot1.png",
-                alt:"Stage 1",
-            },
-            {
-                url:"https://raw.githubusercontent.com/ymjid/Snake/main/assets/img/media/Screenshot2.png",
-                alt:"Leaderboard",
-            },
-            {
-                url:"https://raw.githubusercontent.com/ymjid/Snake/main/assets/img/media/Screenshot3.png",
-                alt:"Stage 2",
-            },
-            {
-                url:"https://raw.githubusercontent.com/ymjid/Snake/main/assets/img/media/Screenshot4.png",
-                alt:"Snake Editor",
-            },
-            {
-                url:"https://raw.githubusercontent.com/ymjid/Snake/main/assets/img/media/Screenshot5.png",
-                alt:"Level Selection",
-            }
-        ],
-        code: "https://github.com/ymjid/Snake",
-    },
-    {
-        id: "2",
-        name: "VideoListMaker",
-        description: `The aim of the project is to be able to create video lists. 
-        The main restriction is to be a standalone project, no database used. The script uses the site tree structure to find lists, images & videos. 
-        The project uses HTML, CSS, Javascript & PHP
-        It's a personal project done during the year 2023.`,
-        release: "2023",
-        tags: [
-            TagsType.JAVASCRIPT,
-            TagsType.CSS,
-            TagsType.HTML,
-            TagsType.PHP,
-        ],
-        subquests: [
-                {
-                    name: "Manage video lists",
-                    state: QuestState.COMPLETED
-                },
-                                {
-                    name: "Upload & remove videos",
-                    state: QuestState.COMPLETED
-                },
-                                {
-                    name: "Add & remove subtitles to videos",
-                    state: QuestState.COMPLETED
-                }
-        ],
-        state: QuestState.COMPLETED,
-        preview: "",
-        theme: ThemeType.VIDEO,
-        code: "https://github.com/ymjid/VideoListMaker",
-    },
-    {
-        id: "3",
-        name: "Portfolio RPG",
-        description: "The aim of the project is to create a portfolio with demos for projects.",
-        release: "2026",
-        tags: [
-            TagsType.ANGULAR,
-            TagsType.SCSS,
-            TagsType.TYPESCRIPT,
-        ],
-        subquests: [
-                {
-                    name: "Conception & content",
-                    state: QuestState.COMPLETED
-                },
-                {
-                    name: "Angular Architecture",
-                    state: QuestState.COMPLETED
-                },
-                {
-                    name: "Development",
-                    state: QuestState.COMPLETED
-                },
-                {
-                    name: "Deployment",
-                    state: QuestState.COMPLETED
-                }
-        ],
-        state: QuestState.COMPLETED,
-        preview: "",
-        images: [
-            {
-                url:"https://raw.githubusercontent.com/ymjid/portfolio-rpg/main/src/assets/portfolio-screenshots/screenshot.png",
-                alt:"Home",
-            },
-            {
-                url:"https://raw.githubusercontent.com/ymjid/portfolio-rpg/main/src/assets/portfolio-screenshots/screenshot2.png",
-                alt:"Quest Card",
-            },
-            {
-                url:"https://raw.githubusercontent.com/ymjid/portfolio-rpg/main/src/assets/portfolio-screenshots/screenshot3.png",
-                alt:"Quest Detail",
-            },
-            {
-                url:"https://raw.githubusercontent.com/ymjid/portfolio-rpg/main/src/assets/portfolio-screenshots/screenshot4.png",
-                alt:"Quest Detail carousel",
-            },
-            {
-                url:"https://raw.githubusercontent.com/ymjid/portfolio-rpg/main/src/assets/portfolio-screenshots/screenshot5.png",
-                alt:"Quest Detail preview",
-            },
-            {
-                url:"https://raw.githubusercontent.com/ymjid/portfolio-rpg/main/src/assets/portfolio-screenshots/screenshot6.png",
-                alt:"Quest Detail Theme 2",
-            },
-        ],
-        code: "https://github.com/ymjid/portfolio-rpg"
-    }
-]
-
-export enum SkillType {
-    HTML_CSS = "HTML/CSS",
-    JAVASCRIPT = "Javascript",
-    TYPESCRIPT = "TypeScript",
-    ANGULAR = "Angular",
-    SCSS = "SCSS",
-    GIT = "Git"
-}
 
 export const SkillRate = {
     BASIC: { name: "Basic Knowledge", value: 1 },
@@ -261,36 +71,9 @@ export type SkillRateType = {
 }
 
 export interface Skill {
-    name: SkillType;
+    name: string;
     rate: SkillRateType;
 }
-
-export const SKILLS: Skill[] = [
-    {
-        name: SkillType.HTML_CSS,
-        rate: SkillRate.EASE,
-    },
-    {
-        name: SkillType.JAVASCRIPT,
-        rate: SkillRate.INTERMEDIATE,
-    },
-    {
-        name: SkillType.TYPESCRIPT,
-        rate: SkillRate.INTERMEDIATE,
-    },
-    {
-        name: SkillType.ANGULAR,
-        rate: SkillRate.BASIC,
-    },
-    {
-        name: SkillType.GIT,
-        rate: SkillRate.INTERMEDIATE,
-    },
-    {
-        name: SkillType.SCSS,
-        rate: SkillRate.BASIC,
-    }
-]
 
 export const GearIcons = {
     VSCode: "assets/gear-icons/vscode_icon.svg",
@@ -316,41 +99,14 @@ export interface Gear {
     height: number,
 }
 
-export const USERGEAR: Gear[] = [
-    {
-        name: "VS Code",
-        logo: GearIcons.VSCode,
-        rarety: Rarety.COMMON,
-        description: "Primary code editor. Used for development, debugging and source control.",
-        slot: 1,
-        width: 2,
-        height: 2,
-    },
-    {
-        name: "GitHub",
-        logo: GearIcons.GitHub,
-        rarety: Rarety.EPIC,
-        description: "Code hosting platform. Used for version control, collaboration and project showcase",
-        slot: 4,
-        width: 3,
-        height: 1,
-    },
-    {
-        name: "Chrome",
-        logo: GearIcons.Chrome,
-        rarety: Rarety.COMMON,
-        description: "Web browser used for testing, debugging and inspecting web applications.",
-        slot: 7,
-        width: 2,
-        height: 3,
-    },
-    {
-        name: "Google Web Designer",
-        logo: GearIcons.GWD,
-        rarety: Rarety.LEGENDARY,
-        description: "Design tool used for creating HTML5 animations and interactive content.",
-        slot: 10,
-        width: 1,
-        height: 1,
-    }
-]
+export type ThemeVariableType = {
+  "--portal-primary": string;
+  "--portal-bg": string;
+  "--portal-text": string;
+  "--portal-card": string;
+  "--portal-border": string;
+}
+export interface Theme {
+    name: string,
+    variables: ThemeVariableType
+}
