@@ -1,15 +1,10 @@
-export enum CharState {
-    LOOKINGJOB = "Looking for job",
-    WORKING = "Working",
-}
-
 export interface Character {
     name: string;
     class: string;
     img?: string;
     github?: string;
     linkedin?: string;
-    state: CharState;
+    state: string;
 }
 
 export type QuestStateType = {
@@ -59,12 +54,6 @@ export interface Quest {
     code?: string,
 }
 
-
-export const SkillRate = {
-    BASIC: { name: "Basic Knowledge", value: 1 },
-    INTERMEDIATE: { name: "Intermediate", value: 2 },
-    EASE: { name: "At ease", value: 3 },
-}
 export type SkillRateType = {
     name: string,
     value: number,
@@ -73,13 +62,6 @@ export type SkillRateType = {
 export interface Skill {
     name: string;
     rate: SkillRateType;
-}
-
-export const GearIcons = {
-    VSCode: "assets/gear-icons/vscode_icon.svg",
-    GitHub: "assets/gear-icons/github_icon.svg",
-    GWD: "assets/gear-icons/gwd_icon.svg",
-    Chrome: "assets/gear-icons/chrome_icon.svg",
 }
 
 export enum Rarety  {
